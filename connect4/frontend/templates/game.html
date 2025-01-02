@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect 4 - Gra</title>
+    <link rel="stylesheet" href="../static/styles2.css">
+    <script src="https://cdn.socket.io/4.4.1/socket.io.min.js"></script>
+</head>
+<body>
+    <h1>Connect 4 - Pokój Gry</h1>
+    <!-- Dodaj element z ID "game-id" -->
+    <h2 id="game-id"></h2>
+
+    <div id="chat-container">
+        <div id="chat-messages" style="height: 200px; overflow-y: scroll; border: 1px solid #ccc; padding: 10px; margin-bottom: 10px;">
+        </div>
+        <input type="text" id="chat-input" placeholder="Wpisz wiadomość">
+        <button id="send-message">Wyślij</button>
+    </div>
+    <script src="../static/game.js" defer></script>
+</body>
+</html>
