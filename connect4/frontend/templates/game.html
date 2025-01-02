@@ -3,21 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connect 4 - Gra</title>
+    <title>Connect 4 - Pokój Gry</title>
     <link rel="stylesheet" href="../static/styles2.css">
     <script src="https://cdn.socket.io/4.4.1/socket.io.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js"></script>
+    <script src="../static/game.js" defer></script>
 </head>
 <body>
     <h1>Connect 4 - Pokój Gry</h1>
-    <!-- Dodaj element z ID "game-id" -->
-    <h2 id="game-id"></h2>
+    <h2 id="game-id">Kod pokoju: </h2>
+    <h3 id="current-player">Ruch gracza:</h3>
 
+    <!-- Plansza gry -->
+    <div id="board">
+        <!-- Komórki będą generowane dynamicznie przez JavaScript -->
+    </div>
+
+    <!-- Sekcja czatu -->
     <div id="chat-container">
-        <div id="chat-messages" style="height: 200px; overflow-y: scroll; border: 1px solid #ccc; padding: 10px; margin-bottom: 10px;">
+        <div id="chat-messages">
         </div>
         <input type="text" id="chat-input" placeholder="Wpisz wiadomość">
         <button id="send-message">Wyślij</button>
     </div>
-    <script src="../static/game.js" defer></script>
 </body>
 </html>
